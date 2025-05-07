@@ -36,6 +36,7 @@ Das Ziel ist es, eine zentrale Anlaufstelle für das praktische Lernen, Ausprobi
   * `03_deploy_with_hardhat.md` – Smart Contracts mit Hardhat deployen
   * `04_frontend_with_ethers_react.md` – Web3-Frontend mit React & ethers.js
   * `05_unit_tests_security.md`– Unit Tests & Sicherheits-Checks für Smart Contracts
+  * `06_token_standards.md` – Token-Standards: ERC-20 und ERC-721 verstehen & implementieren
 * `snippets/` – Codebeispiele aus Solidity, JS und React
 * `playgrounds/` – Hardhat, Foundry & Scaffold-ETH Projekte
 * `frontend/` – Vite + React Web3 Frontend-Anwendungen
