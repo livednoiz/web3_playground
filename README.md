@@ -37,6 +37,7 @@ Das Ziel ist es, eine zentrale Anlaufstelle für das praktische Lernen, Ausprobi
   * `04_frontend_with_ethers_react.md` – Web3-Frontend mit React & ethers.js
   * `05_unit_tests_security.md`– Unit Tests & Sicherheits-Checks für Smart Contracts
   * `06_token_standards.md` – Token-Standards: ERC-20 und ERC-721 verstehen & implementieren
+  * `07_dapp_hosting_verifcation.md` – Hosting & Verifikation einer DApp
 * `snippets/` – Codebeispiele aus Solidity, JS und React
 * `playgrounds/` – Hardhat, Foundry & Scaffold-ETH Projekte
 * `frontend/` – Vite + React Web3 Frontend-Anwendungen
