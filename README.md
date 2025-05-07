@@ -30,6 +30,12 @@ Das Ziel ist es, eine zentrale Anlaufstelle für das praktische Lernen, Ausprobi
 ## 📁 Struktur (wird sukzessive aufgebaut)
 
 * `tutorials/` – markdown-basierte Lerneinheiten
+
+  * `01_intro_to_web3.md` – Was ist Web3? Überblick & Grundlagen
+  * `02_smart_contracts_solidity.md` – Ein erster Smart Contract
+  * `03_deploy_with_hardhat.md` – Smart Contracts mit Hardhat deployen
+  * `04_frontend_with_ethers_react.md` – Web3-Frontend mit React & ethers.js
+  * `05_unit_tests_security.md`– Unit Tests & Sicherheits-Checks für Smart Contracts
 * `snippets/` – Codebeispiele aus Solidity, JS und React
 * `playgrounds/` – Hardhat, Foundry & Scaffold-ETH Projekte
 * `frontend/` – Vite + React Web3 Frontend-Anwendungen
