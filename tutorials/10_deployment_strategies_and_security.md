@@ -106,6 +106,4 @@ Verifizierung sorgt für Transparenz und Vertrauen bei Nutzern.
 
 ---
 
-➡️ Abschluss: `11_final_considerations_and_roadmap.md`
-
 > 🛡️ *„Sicherheit ist kein Feature – es ist ein Prozess.“*
