@@ -38,7 +38,7 @@ Das Ziel ist es, eine zentrale Anlaufstelle für das praktische Lernen, Ausprobi
   * `05_unit_tests_security.md`– Unit Tests & Sicherheits-Checks für Smart Contracts
   * `06_token_standards.md` – Token-Standards: ERC-20 und ERC-721 verstehen & implementieren
   * `07_dapp_hosting_verifcation.md` – Hosting & Verifikation einer DApp
-  *  `08_cross_chain_and_advanced_patterns.md` – Cross-Chain-Kommunikation & fortgeschrittene Patterns
+  * `08_cross_chain_and_advanced_patterns.md` – Cross-Chain-Kommunikation & fortgeschrittene Patterns
 * `snippets/` – Codebeispiele aus Solidity, JS und React
 * `playgrounds/` – Hardhat, Foundry & Scaffold-ETH Projekte
 * `frontend/` – Vite + React Web3 Frontend-Anwendungen
