@@ -39,6 +39,7 @@ Das Ziel ist es, eine zentrale Anlaufstelle für das praktische Lernen, Ausprobi
   * `06_token_standards.md` – Token-Standards: ERC-20 und ERC-721 verstehen & implementieren
   * `07_dapp_hosting_verifcation.md` – Hosting & Verifikation einer DApp
   * `08_cross_chain_and_advanced_patterns.md` – Cross-Chain-Kommunikation & fortgeschrittene Patterns
+  * `09_governance_and_tokenomics.md` – Governance & Tokenomics
 * `snippets/` – Codebeispiele aus Solidity, JS und React
 * `playgrounds/` – Hardhat, Foundry & Scaffold-ETH Projekte
 * `frontend/` – Vite + React Web3 Frontend-Anwendungen
