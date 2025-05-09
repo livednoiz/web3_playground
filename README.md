@@ -41,6 +41,7 @@ Das Ziel ist es, eine zentrale Anlaufstelle für das praktische Lernen, Ausprobi
   * `08_cross_chain_and_advanced_patterns.md` – Cross-Chain-Kommunikation & fortgeschrittene Patterns
   * `09_governance_and_tokenomics.md` – Governance & Tokenomics
   * `10_deployment_strategies_and_security.md` – Deployment-Strategien & Smart Contract Security
+  * `11_final_considerations_and_roadmap.md` – Abschluss: Überlegungen & Roadmap
 * `snippets/` – Codebeispiele aus Solidity, JS und React
 * `playgrounds/` – Hardhat, Foundry & Scaffold-ETH Projekte
 * `frontend/` – Vite + React Web3 Frontend-Anwendungen
