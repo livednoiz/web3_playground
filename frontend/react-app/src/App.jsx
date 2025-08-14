@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import SandpackExampleViewer from "./components/SandpackExampleViewer";
 import InfoPanel from "./components/InfoPanel";
 import TutorialLinks from "./components/TutorialLinks";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
 function App() {
+  const [themeClass, setThemeClass] = useState("bg-gradient-to-br from-blue-50 to-purple-100 text-gray-900");
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 p-6 font-sans">
+    <main className={`min-h-screen p-6 font-sans ${themeClass}`}>
       <div className="max-w-2xl mx-auto">
+        <ThemeSwitcher onThemeChange={setThemeClass} />
         <InfoPanel />
         <section className="bg-white rounded shadow p-6 mb-6 border-l-4 border-purple-400">
           <h1 className="text-3xl font-extrabold mb-2 text-purple-700">Web3 Playground</h1>
