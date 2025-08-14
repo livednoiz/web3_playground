@@ -1,6 +1,7 @@
 import React from "react";
 import SandpackExampleViewer from "./components/SandpackExampleViewer";
 import InfoPanel from "./components/InfoPanel";
+import TutorialLinks from "./components/TutorialLinks";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <li>Modernes, responsives Design für Desktop & Mobile</li>
           </ul>
         </section>
+        <TutorialLinks />
         <section className="bg-white rounded shadow p-6 border-l-4 border-blue-400">
           <h2 className="text-xl font-bold mb-4 text-blue-700">Interaktive Beispiele</h2>
           <SandpackExampleViewer />
