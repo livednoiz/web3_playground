@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import TutorialsPage from "./pages/TutorialsPage";
+import ExamplesPage from "./pages/ExamplesPage";
 import SandpackExampleViewer from "./components/SandpackExampleViewer";
 import InfoPanel from "./components/InfoPanel";
 import TutorialLinks from "./components/TutorialLinks";
@@ -9,32 +12,20 @@ import Navbar from "./components/Navbar";
 function App() {
   const [themeClass, setThemeClass] = useState("bg-gradient-to-br from-blue-50 to-purple-100 text-gray-900");
   return (
-  <BrowserRouter>
-    <main className={`min-h-screen p-6 font-sans ${themeClass}`}>
-      <div className="max-w-2xl mx-auto">
-        <Navbar />
-        <ThemeSwitcher onThemeChange={setThemeClass} />
-        <InfoPanel />
-        <section className="bg-white rounded shadow p-6 mb-6 border-l-4 border-purple-400">
-          <h1 className="text-3xl font-extrabold mb-2 text-purple-700">Web3 Playground</h1>
-          <p className="mb-4 text-gray-700 text-lg">
-            <b>Ziel:</b> Mit diesem Playground kannst du Web3-Technologien interaktiv und praxisnah erleben. Probiere Wallet-Interaktionen, Smart Contracts und Blockchain-Features direkt im Browser aus – ohne Setup!
-          </p>
-          <ul className="list-disc ml-6 text-gray-600">
-            <li>Live-Editor für Web3-Code (React, ethers.js, Solidity)</li>
-            <li>Beispiele für Wallet-Connect, Token-Interaktionen und mehr</li>
-            <li>Direkte Integration von Tutorials und Lerninhalten</li>
-            <li>Modernes, responsives Design für Desktop & Mobile</li>
-          </ul>
-        </section>
-        <TutorialLinks />
-        <section className="bg-white rounded shadow p-6 border-l-4 border-blue-400">
-          <h2 className="text-xl font-bold mb-4 text-blue-700">Interaktive Beispiele</h2>
-          <SandpackExampleViewer />
-        </section>
-      </div>
-    </main>
-  </BrowserRouter>
+    <BrowserRouter>
+      <main className={`min-h-screen p-6 font-sans ${themeClass}`}>
+        <div className="max-w-2xl mx-auto">
+          <Navbar />
+          <ThemeSwitcher onThemeChange={setThemeClass} />
+          <InfoPanel />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/tutorials" element={<TutorialsPage />} />
+            <Route path="/examples" element={<ExamplesPage />} />
+          </Routes>
+        </div>
+      </main>
+    </BrowserRouter>
   );
 }
 export default App;
