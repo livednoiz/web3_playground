@@ -6,7 +6,7 @@ Diese Roadmap zeigt sinnvolle Erweiterungen, die das Projekt Schritt für Schrit
 ---
 
 ## 1. Weitere Web3-Beispiele
-- [ ] NFT-Interaktionen (ERC-721, ERC-1155)
+- [x] NFT-Interaktionen (ERC-721, ERC-1155)
 - [ ] Token-Transfer und Approval
 - [ ] On-Chain Voting & Governance
 - [ ] DeFi-Protokolle (Uniswap, Aave)
