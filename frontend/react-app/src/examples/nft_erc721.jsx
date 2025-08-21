@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ethers } from "ethers";
+import { BrowserProvider, Contract, formatUnits } from "ethers";
 
 const NFT_CONTRACT_ADDRESS = "0xYourNFTContractAddress"; // Demo-Adresse
 const ABI = [
@@ -15,7 +15,7 @@ export default function NFTDemo() {
   async function fetchNFT() {
     try {
       if (!window.ethereum) throw new Error("Wallet nicht gefunden!");
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const provider = new BrowserProvider(window.ethereum);
       const [account] = await provider.send("eth_requestAccounts", []);
       const contract = new ethers.Contract(NFT_CONTRACT_ADDRESS, ABI, provider);
       const balance = await contract.balanceOf(account);

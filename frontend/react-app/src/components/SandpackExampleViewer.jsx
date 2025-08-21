@@ -27,7 +27,7 @@ export default function ConnectWallet() {
 
 const basicERC20Source = `
 import { useState, useEffect } from 'react';
-import { ethers } from 'ethers';
+import { BrowserProvider, Contract, formatUnits } from 'ethers';
 
 const ERC20_ABI = [
   "function balanceOf(address) view returns (uint256)"
@@ -45,11 +45,12 @@ export default function BasicERC20() {
         setNoWallet(true);
         return;
       }
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const contract = new ethers.Contract(tokenAddress, ERC20_ABI, provider);
-      const [account] = await provider.send('eth_requestAccounts', []);
+      const provider = new BrowserProvider(window.ethereum);
+      const contract = new Contract(tokenAddress, ERC20_ABI, provider);
+      const accounts = await provider.send('eth_requestAccounts', []);
+      const account = accounts[0];
       const userBalance = await contract.balanceOf(account);
-      setBalance(ethers.utils.formatUnits(userBalance, 18));  // Assuming 18 decimals for ERC20
+      setBalance(formatUnits(userBalance, 18));  // Assuming 18 decimals for ERC20
     }
     fetchBalance();
   }, []);
@@ -69,7 +70,7 @@ export default function BasicERC20() {
 
 const nftERC721Source = `
 import { useState } from 'react';
-import { ethers } from 'ethers';
+import { BrowserProvider, Contract } from 'ethers';
 
 const NFT_CONTRACT_ADDRESS = "0xYourNFTContractAddress"; // Demo-Adresse
 const ABI = [
@@ -85,9 +86,10 @@ export default function NFTDemo() {
   async function fetchNFT() {
     try {
       if (!window.ethereum) throw new Error("Wallet nicht gefunden!");
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const [account] = await provider.send("eth_requestAccounts", []);
-      const contract = new ethers.Contract(NFT_CONTRACT_ADDRESS, ABI, provider);
+      const provider = new BrowserProvider(window.ethereum);
+      const accounts = await provider.send("eth_requestAccounts", []);
+      const account = accounts[0];
+      const contract = new Contract(NFT_CONTRACT_ADDRESS, ABI, provider);
       const balance = await contract.balanceOf(account);
       const owner = await contract.ownerOf(1);
       const uri = await contract.tokenURI(1);

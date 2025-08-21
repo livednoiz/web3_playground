@@ -1,7 +1,7 @@
 // playgrounds/sandpack/examples/basic_erc20.jsx
 
 import { useState, useEffect } from 'react';
-import { ethers } from 'ethers';
+import { BrowserProvider, Contract, formatUnits } from 'ethers';
 
 const ERC20_ABI = [
   "function balanceOf(address) view returns (uint256)"
@@ -15,11 +15,12 @@ function BasicERC20() {
   useEffect(() => {
     async function fetchBalance() {
       if (window.ethereum) {
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const contract = new ethers.Contract(tokenAddress, ERC20_ABI, provider);
-        const [account] = await provider.send('eth_requestAccounts', []);
+        const provider = new BrowserProvider(window.ethereum);
+        const contract = new Contract(tokenAddress, ERC20_ABI, provider);
+        const accounts = await provider.send('eth_requestAccounts', []);
+        const account = accounts[0];
         const userBalance = await contract.balanceOf(account);
-        setBalance(ethers.utils.formatUnits(userBalance, 18));  // Assuming 18 decimals for ERC20
+        setBalance(formatUnits(userBalance, 18));  // Assuming 18 decimals for ERC20
       }
     }
 
